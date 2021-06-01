@@ -8,14 +8,13 @@
 import UIKit
 
 class ZoomInViewController: UIViewController {
-    var imageName: String = ""
-    @IBOutlet weak var zoomInImage: UIImageView!
+    var image: UIImage!
+    @IBOutlet weak var zoomInImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        zoomInImage.isUserInteractionEnabled = true
         // Do any additional setup after loading the view.
-        zoomInImage.image = UIImage(named: "images/\(imageName).jpeg")
+        zoomInImageView.image = image
     }
     
 

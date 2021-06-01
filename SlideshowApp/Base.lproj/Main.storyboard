@@ -17,20 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQK-u2-xoS">
-                                <rect key="frame" x="131" y="782" width="117" height="30"/>
+                                <rect key="frame" x="131" y="782" width="152" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0H-rF-ZmR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83T-Tw-KCC">
-                                <rect key="frame" x="298" y="782" width="66" height="30"/>
-                                <state key="normal" title="再生/停止"/>
+                                <rect key="frame" x="333" y="782" width="31" height="30"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="playOrStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZk-kV-uGO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mr4-xS-9wJ">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mr4-xS-9wJ">
                                 <rect key="frame" x="0.0" y="108" width="414" height="624"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -67,14 +67,14 @@
                     <connections>
                         <outlet property="backwardButton" destination="KQK-u2-xoS" id="BrB-iA-4jX"/>
                         <outlet property="forwardButton" destination="5Qn-W8-1HL" id="d1Q-9L-FBd"/>
-                        <outlet property="slide_image" destination="mr4-xS-9wJ" id="OpP-gg-4ZM"/>
+                        <outlet property="playOrStopButton" destination="83T-Tw-KCC" id="ipM-7r-xOg"/>
+                        <outlet property="slideImageView" destination="mr4-xS-9wJ" id="5j9-mr-Lyo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="XGr-Nk-nu4">
                     <connections>
-                        <action selector="imageTapGesture:" destination="BYZ-38-t0r" id="4Ud-9n-6gz"/>
-                        <segue destination="j9f-bp-SdU" kind="show" id="6Sq-Ge-7Jt"/>
+                        <segue destination="j9f-bp-SdU" kind="show" id="Ji9-BT-2jI"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -88,7 +88,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDC-km-oEh">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDC-km-oEh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -115,7 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uOv-Qp-HUC"/>
                     <connections>
-                        <outlet property="zoomInImage" destination="pDC-km-oEh" id="J73-k4-MEk"/>
+                        <outlet property="zoomInImageView" destination="pDC-km-oEh" id="hKQ-SS-aJU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cH6-LT-MKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
